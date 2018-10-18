@@ -22,6 +22,8 @@ namespace KA_lb2
         private int maxColStart = 0;  // номер столбца с которого начинается максимальная субматрица
         private int maxColEnd = 0;    // номер столбца с которым заканчивается максимальная субматрица
 
+        private int maxSum = 0;
+
         private int[][] matrix;  // матрица, в которой ищем
 
         int n_str, // количество строк
@@ -29,6 +31,7 @@ namespace KA_lb2
 
         public int N_str { get { return n_str; } set { n_str = value; } }
         public int N_col { get { return n_col; } set { n_col = value; } }
+        public int MaxSum { get { return maxSum; } } 
 
         public Search(int[][] arr)
         {
@@ -75,7 +78,6 @@ namespace KA_lb2
             int start = 0;
             int fin = 0;
             int[] partialSum = new int[colCount];  // массив сумм подмассива
-            int maxSum = 0; 
 
             // Идем по всем строкам
             for (int rowStart = 0; rowStart < rowCount; rowStart++)

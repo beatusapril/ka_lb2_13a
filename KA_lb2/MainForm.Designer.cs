@@ -37,6 +37,8 @@
             this.dtStart = new System.Windows.Forms.DataGridView();
             this.dtResult = new System.Windows.Forms.DataGridView();
             this.btnAbout = new System.Windows.Forms.Button();
+            this.tbSum = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtResult)).BeginInit();
             this.SuspendLayout();
@@ -119,6 +121,8 @@
             // 
             // dtStart
             // 
+            this.dtStart.AllowUserToAddRows = false;
+            this.dtStart.AllowUserToDeleteRows = false;
             this.dtStart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtStart.Location = new System.Drawing.Point(13, 28);
             this.dtStart.Name = "dtStart";
@@ -127,9 +131,14 @@
             // 
             // dtResult
             // 
+            this.dtResult.AllowUserToAddRows = false;
+            this.dtResult.AllowUserToDeleteRows = false;
+            this.dtResult.AllowUserToResizeColumns = false;
+            this.dtResult.AllowUserToResizeRows = false;
             this.dtResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtResult.Location = new System.Drawing.Point(320, 28);
             this.dtResult.Name = "dtResult";
+            this.dtResult.ReadOnly = true;
             this.dtResult.Size = new System.Drawing.Size(277, 281);
             this.dtResult.TabIndex = 8;
             // 
@@ -143,11 +152,30 @@
             this.btnAbout.UseVisualStyleBackColor = true;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
+            // tbSum
+            // 
+            this.tbSum.Location = new System.Drawing.Point(608, 165);
+            this.tbSum.Name = "tbSum";
+            this.tbSum.ReadOnly = true;
+            this.tbSum.Size = new System.Drawing.Size(100, 20);
+            this.tbSum.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(606, 146);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Sum";
+            // 
             // mnForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(718, 343);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbSum);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.dtResult);
             this.Controls.Add(this.dtStart);
@@ -176,6 +204,8 @@
         private System.Windows.Forms.DataGridView dtStart;
         private System.Windows.Forms.DataGridView dtResult;
         private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.TextBox tbSum;
+        private System.Windows.Forms.Label label2;
     }
 }
 

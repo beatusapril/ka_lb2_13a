@@ -34,6 +34,8 @@ namespace KA_lb2
         /// <param name="e"></param>
         private void btnGenerate_Click(object sender, EventArgs e)
         {
+            tbSum.Clear();
+            dtStart.ReadOnly = false;
             dtResult.Visible = false;
             if (getNumber())
                 MatrMake.instailDataGrid(countCol, countRow, width, dtStart);
@@ -59,8 +61,12 @@ namespace KA_lb2
             MatrMake.instailDataGrid(matr.N_col, matr.N_str, width, dtResult);
 
             matr.MatrixToGrid(dtResult);
+            tbSum.Text = search.MaxSum.ToString();
+            dtStart.ReadOnly = true;
             changeVisible(true, false);
         }
+
+
 
         /// <summary>
         /// Изменение доступности компонентов
@@ -72,6 +78,7 @@ namespace KA_lb2
             btnGenerate.Visible = a;
             btnSearch.Visible = b;
         }
+
 
         /// <summary>
         /// Получение значений кол-ва строк и столбцов
